@@ -4,7 +4,7 @@
 
 构建的过程很长（4小时或更长），涉及多种软件。强烈建议在开始构建前通读本指南。
 
-如果你遇到错误或困难，请查看[F.A.Q.](#https://carla.readthedocs.io/en/latest/build_faq/)页面，该页面提供了部分常见问题的解决方案，或者你可以在 [Carla forum](#https://github.com/carla-simulator/carla/discussions) 上发布你可能存在的任何疑问。
+如果你遇到错误或困难，请查看[F.A.Q.](#https://carla.readthedocs.io/en/latest/build_faq/)页面，该页面提供了部分常见问题的解决方案，或者你可以在[Carla forum](#https://github.com/carla-simulator/carla/discussions)上发布你可能存在的任何疑问。
 
 - [第一阶段: 准备工作](#第一阶段准备工作)
     - [系统需求](#系统需求)
@@ -23,13 +23,13 @@
 
 ## 第一阶段：准备工作
 
-在此阶段，你将会找到在你构建 Carla 前需要确认的必备要求，包括系统需求、Minor and major software installations 以及 Python 依赖。
+在此阶段，你将会找到在你构建Carla前需要确认的必备要求，包括系统需求、软件需求，其中软件需求包括Minor安装、 major安装以及Python依赖。
 
 ### 系统需求
 
 * **x64 系统**。模拟器需要运行在64位Windows系统上。
 * **165 GB 硬盘空间**。Carla需要约32GB空间，而相关的主要软件（包括虚幻引擎）需要约133GB空间。
-* **足够的GPU**。Carla 旨在实现真实的模拟，所以 Server 需要至少有6GB显存的GPU，尽管推荐配置是8GB。
+* **足够的GPU**。Carla旨在实现真实的模拟，所以Server需要至少有6GB显存的GPU，尽管推荐配置是8GB。
 * **两个TCP端口和良好的网络连接**。默认端口是2000和20001，确保这两个端口没有被防火墙或其他应用阻塞。
 
 > [!WARNING]
@@ -42,8 +42,8 @@
 - [CMake](https://cmake.org/download/) 从简单的 configuration files 生成标准的 build files 。
 - [Git](https://git-scm.com/downloads) 是管理 carla 仓库的版本管理系统
 - [Make](http://gnuwin32.sourceforge.net/packages/make.htm) 生成可执行文件
-- [7Zip](https://www.7-zip.org/)
-- [Python3 x64](https://www.python.org/downloads/)
+- [7Zip](https://www.7-zip.org/) 是一个文件压缩软件。这对于 asset files 的自动解压缩是必需的。
+- [Python3 x64](https://www.python.org/downloads/)是Carla中主要的脚本语言。安装x32版本可能会导致冲突，因此强烈建议卸载x32版本。
 
 > [!IMPORTANT]
 > 确保以上所有程序被添加到**环境变量**中
@@ -89,7 +89,7 @@ pip3 install --user wheel
 
 ##### Unreal Engine
 
-从0.9.12版本开始，Carla 使用了 Unreal Engine 4.26的 modified fork。此 fork 包含 Carla 特有的补丁。
+从0.9.12版本开始，Carla 使用了 Unreal Engine 4.26 的 modified fork。此 fork 包含 Carla 特有的补丁。
 
 请注意，要下载这个虚幻引擎的分支，你需要有一个链接到虚幻引擎帐户的GitHub帐户。如果您没有此设置，请在继续操作之前遵循[本指南](https://www.unrealengine.com/en-US/ue4-on-github)。
 
