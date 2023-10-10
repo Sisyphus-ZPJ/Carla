@@ -11,4 +11,4 @@ Carla的[官方文档](https://carla.readthedocs.io/en/latest/)非常详细，�
 
 如果需要使用虚幻引擎完成高级定制和开发选项，你需要使用构建版本的 carla ，包括 [Windows](#https://carla.readthedocs.io/en/latest/build_windows/) 和 [Linux](#https://carla.readthedocs.io/en/latest/build_linux/) 两种系统。
 
-**本项目选择了 Windows Build 的方式安装 Carla ，详见[Installation (Windows build)](/Installation%20(Windos%20build).md)。**
+**本项目选择了 Windows Build 的方式安装 Carla ，详见[Installation](/Installation%20(Windos%20build).md)。**

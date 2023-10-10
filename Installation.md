@@ -93,7 +93,7 @@ pip3 install --user wheel
 
 请注意，要下载这个虚幻引擎的分支，你需要有一个链接到虚幻引擎帐户的GitHub帐户。如果您没有此设置，请在继续操作之前遵循[本指南](https://www.unrealengine.com/en-US/ue4-on-github)。
 
-（本人好像没用到这个账户，有无大佬讲解一下）
+(笔者好像没用到这个账户，有无大佬讲解一下）
 
 请通过以下步骤构建虚幻引擎：
 
@@ -154,6 +154,8 @@ Update.bat
 ```
 tar -xvzf <assets_file_name>.tar.gz.tar -C C:\path\to\carla\Unreal\CarlaUE4\Content\Carla
 ```
+
+(笔者的 `update.bat` 命令运行失败了，应该是下载文件太大了，网络不稳定造成的。笔者按照 `update.bat` 命令里提到的下载地址，用下载引擎下载到文件 *20221201_5ec9328.tar.gz*，共15GB，并用上述解压命令安装了assets，读者可以参考一下)
 
 ### 设置虚幻引擎环境变量
 
