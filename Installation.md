@@ -21,6 +21,9 @@
     - [构建 Carla](#构建-carla)
     - [其他 make 命令](#其他-make-命令)
 
+> [!NOTE]
+> 推荐查看YouTube上的[安装视频](#https://www.youtube.com/watch?v=lLkFA0fPrgs)，该视频展示了Carla的Windows build的全流程。
+
 ## 第一阶段：准备工作
 
 在此阶段，你将会找到在你构建Carla前需要确认的必备要求，包括系统需求、软件需求，其中软件需求包括Minor安装、 major安装以及Python依赖。
@@ -30,7 +33,7 @@
 * **x64 系统**。模拟器需要运行在64位Windows系统上。
 * **165 GB 硬盘空间**。Carla需要约32GB空间，而相关的主要软件（包括虚幻引擎）需要约133GB空间。
 * **足够的GPU**。Carla旨在实现真实的模拟，所以Server需要至少有6GB显存的GPU，尽管推荐配置是8GB。
-* **两个TCP端口和良好的网络连接**。默认端口是2000和20001，确保这两个端口没有被防火墙或其他应用阻塞。
+* **两个TCP端口和良好的网络连接**。默认端口是2000和2001，确保这两个端口没有被防火墙或其他应用阻塞。
 
 > [!WARNING]
 > **如果你从 Carla 0.9.12 更新到 0.9.13**: 你必须更新 UE4 引擎的 Carla fork 到最新版本，关于更新的细节请查看 Unreal Engine 小节。
@@ -40,13 +43,15 @@
 #### Minor installations
 
 - [CMake](https://cmake.org/download/) 从简单的 configuration files 生成标准的 build files 。
-- [Git](https://git-scm.com/downloads) 是管理 carla 仓库的版本管理系统
-- [Make](http://gnuwin32.sourceforge.net/packages/make.htm) 生成可执行文件
+- [Git](https://git-scm.com/downloads) 是管理 carla 仓库的版本管理系统。
+- [Make](http://gnuwin32.sourceforge.net/packages/make.htm) 生成可执行文件。
 - [7Zip](https://www.7-zip.org/) 是一个文件压缩软件。这对于 asset files 的自动解压缩是必需的。
 - [Python3 x64](https://www.python.org/downloads/)是Carla中主要的脚本语言。安装x32版本可能会导致冲突，因此强烈建议卸载x32版本。
 
 > [!IMPORTANT]
 > 确保以上所有程序被添加到**环境变量**中
+
+（笔者的Python 3.8是在conda的虚拟环境内安装，但是好像没有安装python launcher，后面在构建Carla时执行`make PythonAPI`出现了问题，所以笔者直接在C盘默认路径重新安装了Python 3.12，所以使用conda虚拟环境内python的读者可能需要注意一下）
 
 #### Python dependencies
 从 Carla 0.9.12 开始，用户可以选择使用 `pip3` 安装 Carla Python API ，需要 20.3 或者更高的版本，使用以下指令检查你是否拥有合适的版本：
@@ -79,7 +84,7 @@ pip3 install --user wheel
 - **.Net framework 4.6.2**。在 *Workloads* 中，选择 **.NET desktop development** ，并且在右侧的 *Installation details* 栏，选择 `.NET Framework 4.6.2 development tools` 。这是构建虚幻引擎所必须的。
 
 > [!IMPORTANT]
-> 根据作者的实践，发现 Visual Studio Installer 中 VS2019 删除了 winSDK 8.1，可以在[此链接](https://go.microsoft.com/fwlink/p/?LinkId=323507)下载 SDK 8.1 的安装包，下载后直接安装即可。该安装链接来自微软官方发布的[Windows SDK存档](https://developer.microsoft.com/zh-cn/windows/downloads/sdk-archive/)，解决方法参考自[某CSDN博客](https://blog.csdn.net/Septembre_/article/details/111320427)。
+> 根据笔者的实践，发现 Visual Studio Installer 中 VS2019 删除了 winSDK 8.1，可以在[此链接](https://go.microsoft.com/fwlink/p/?LinkId=323507)下载 SDK 8.1 的安装包，下载后直接安装即可。该安装链接来自微软官方发布的[Windows SDK存档](https://developer.microsoft.com/zh-cn/windows/downloads/sdk-archive/)，解决方法参考自[某CSDN博客](https://blog.csdn.net/Septembre_/article/details/111320427)。
 
 > [!IMPORTANT]
 > 其他版本的 Visual Studio 可能会引起冲突。请确保将以前的 Visual Studio 完全删除，你可能需要到 `Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout` 中，运行 `.\InstallCleanup.exe -full` 以完全清除过去版本留下的信息。
@@ -185,6 +190,8 @@ Python API client 授予对 simulation 的控制权。你需要在第一次构�
 make PythonAPI
 ```
 
+(该命令的执行耗时较长，且可解释性较差，可能出现像笔者一样不知道是否成功运行的现象，因此笔者在此给出自己的命令运行后的[输出结果](/makePythonAPI输出结果.txt)作为参考对照)
+
 The Carla client library 将以两种不同的、互斥的形式构建。这给予了用户选择何种方式运行 Carla client 代码的自由。两种方式包括 .egg 文件和 .whl 文件。 选择以下其中**一种**方式使用 client library ：
 
 **A. .egg 文件**
@@ -200,7 +207,7 @@ The Carla client library 将以两种不同的、互斥的形式构建。这给�
 pip3 install <path/to/wheel>.whl
 ```
 
-~~This .whl file cannot be distributed as it is built specifically for your OS.~~
+(此处笔者直接跳过了，官方文档对两个文件的安装描述地比较模糊，但是既然二选一且.egg不需要安装，那么简便起见先跳过该步骤)
 
 > [!WARNING]
 > 使用不同的方法安装 Carla client library 以及在系统上安装不同版本的 carla 可能会出现问题。建议在安装 .whl 时使用虚拟环境，并在安装新的 client library 之前卸载以前安装的任何 client library 。

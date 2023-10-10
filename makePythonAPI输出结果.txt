@@ -1,0 +1,206 @@
+C:\carla>make PythonAPI
+-[Setup]: [Batch params]: --boost-toolset msvc-14.2 --all
+-[Setup]: Asynchronous jobs:  16
+-[Setup]: Boost toolset:      msvc-14.2
+-[Setup]: Install directory:  "C:\carla\Build\"
+-[Setup]: Installing zlib...
+    -[install_zlib]: [Batch params]: --build-dir "C:\carla\Build\"
+    -[install_zlib]: A zlib installation already exists.
+    -[install_zlib]: Delete "C:\carla\Build\zlib-install\" if you want to force a rebuild.
+    -[install_zlib]: Exiting...
+-[Setup]: Installing libpng...
+    -[install_libpng]: [Batch params]: --build-dir "C:\carla\Build\" --zlib-install-dir "C:\carla\Build\zlib-install\"
+    -[install_libpng]: A libpng installation already exists.
+    -[install_libpng]: Delete "C:\carla\Build\libpng-1.2.37-install\" if you want to force a rebuild.
+    -[install_libpng]: Exiting...
+-[Setup]: Installing rpclib...
+    -[install_rpclib]: [Batch params]: --build-dir "C:\carla\Build\"
+    -[install_rpclib]: A rpclib installation already exists.
+    -[install_rpclib]: Delete "C:\carla\Build\rpclib-install\" if you want to force a rebuild.
+    -[install_rpclib]: Exiting...
+-[Setup]: Installing Google Test...
+    -[install_gtest]: [Batch params]: --build-dir "C:\carla\Build\"
+    -[install_gtest]: A Google Test installation already exists.
+    -[install_gtest]: Delete "C:\carla\Build\gtest-install\" if you want to force a rebuild.
+    -[install_gtest]: Exiting...
+-[Setup]: Installing "Recast & Detour"...
+    -[install_recast]: [Batch params]: --build-dir "C:\carla\Build\"
+    -[install_recast]: A "Recast & Detour" installation already exists.
+    -[install_recast]: Delete "C:\carla\Build\recast-0b13b0-install\" if you want to force a rebuild.
+    -[install_recast]: Exiting...
+-[Setup]: Installing Boost...
+    -[install_boost]: [Batch params]: --build-dir "C:\carla\Build\" --toolset msvc-14.2 --version 1.80.0 -j 16
+    -[install_boost]: A Boost installation already exists.
+    -[install_boost]: Delete "C:\carla\Build\boost-1.80.0-install\" if you want to force a rebuild.
+    -[install_boost]: Exiting...
+-[Setup]: Installing Xercesc...
+    -[install_xercesc]: [Batch params]: --build-dir "C:\carla\Build\"
+    -[install_xercesc]: A xerces installation already exists.
+    -[install_xercesc]: Delete "C:\carla\Build\xerces-c-3.2.3-install\" if you want to force a rebuild.
+    -[install_xercesc]: Exiting...
+系统找不到指定的文件。
+-[Setup]: Installing Sqlite3
+    -[install_sqlite3]: [Batch params]: --build-dir "C:\carla\Build\"
+    -[install_sqlite3]: A Sqlite3 installation already exists.
+    -[install_sqlite3]: Delete "C:\carla\Build\sqlite3-install" if you want to force a rebuild.
+    -[install_sqlite3]: Exiting...
+已复制         1 个文件。
+-[Setup]: Installing PROJ
+    -[install_proj]: [Batch params]: --build-dir "C:\carla\Build\"
+    -[install_proj]: A PROJ installation already exists.
+    -[install_proj]: Delete "C:\carla\Build\proj-install" if you want to force a rebuild.
+    -[install_proj]: Exiting...
+已复制         1 个文件。
+-[Setup]: Installing Eigen
+    -[install_eigen]: [Batch params]: --build-dir "C:\carla\Build\"
+复制了 0 个文件
+复制了 0 个文件
+已复制         1 个文件。
+已复制         1 个文件。
+
+    -[install_eigen]: Eigen has been successfully installed in "C:\carla\Build\eigen-install"!
+    -[install_eigen]: Exiting...
+-[Setup]: Creating "CMakeLists.txt.in"...
+-[Setup]:
+   ###########
+   # SUCCESS #
+   ###########
+
+   IMPORTANT!
+
+   All the CARLA library dependences should be installed now.
+   (You can remove all "*-src" folders in C:\carla\Build\ directory)
+
+   You only need the ASSET PACK with all the meshes and textures.
+
+   This script provides the assets for CARLA 0.9.14:
+   You can download the assets from here:
+
+       http://carla-assets.s3.amazonaws.com/20221201_5ec9328.tar.gz
+
+   Unzip it in the "C:\carla\Unreal\CarlaUE4\Content\Carla\" folder.
+   If you want another version, search it in C:\carla\Util\ContentVersions.txt.
+
+-[BuildLibCarla]: [Batch params]: --server --client
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.19045.
+-- Build debug:   ON
+-- Build release: ON
+-- Build test:    ON
+-- Configuring done (0.9s)
+-- Generating done (0.5s)
+-- Build files have been written to: C:/carla/Build/libcarla-visualstudio
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  1>Checking Build System
+  carla_server.vcxproj -> C:\carla\Build\libcarla-visualstudio\LibCarla\cmake\server\Release\carla_server.lib
+  carla_server_debug.vcxproj -> C:\carla\Build\libcarla-visualstudio\LibCarla\cmake\server\Release\carla_server_debug.lib
+  1>
+  -- Install configuration: "Release"
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.19045.
+-- Build debug:   ON
+-- Build release: ON
+-- Build test:    ON
+-- Configuring done (0.1s)
+-- Generating done (0.4s)
+-- Build files have been written to: C:/carla/Build/libcarla-visualstudio
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  1>Checking Build System
+  carla_client.vcxproj -> C:\carla\Build\libcarla-visualstudio\LibCarla\cmake\client\Release\carla_client.lib
+  carla_client_debug.vcxproj -> C:\carla\Build\libcarla-visualstudio\LibCarla\cmake\client\Release\carla_client_debug.lib
+  1>
+  -- Install configuration: "Release"
+-[BuildLibCarla]: LibCarla server has been successfully installed in "C:\carla\Unreal\CarlaUE4\Plugins\Carla\CarlaDependencies\"!
+-[BuildLibCarla]: LibCarla client has been successfully installed in "C:\carla\PythonAPI\carla\dependencies\"!
+-[BuildOSM2ODR]: [Batch params]: --build --all
+HEAD is now at ee0c2b9241f Removed debug warnings
+CMake Warning (dev) at CMakeLists.txt:23 (project):
+  cmake_minimum_required() should be called prior to this top-level project()
+  call.  Please see the cmake-commands(7) manual for usage documentation of
+  both commands.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 10.0.19041.0 to target Windows 10.0.19045.
+CMake Deprecation Warning at CMakeLists.txt:25 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- CMAKE_BINARY_DIR: C:/carla/Build/osm2odr-visualstudio
+-- CMAKE_SOURCE_DIR: C:/carla/Build/om2odr-source
+--
+-- Platform:
+--     Host: Windows-10.0.19045 AMD64
+--     Target: Windows-10.0.19045 AMD64
+--     CMake: 3.27.7
+--     CMake generator: Visual Studio 16 2019
+--     CMake build tool: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe
+--     Compiler: MSVC 19.29.30152.0
+--
+CMake Error at C:/Program Files/CMake/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+  Failed to find XercesC (missing: XercesC_VERSION)
+Call Stack (most recent call first):
+  C:/Program Files/CMake/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake:600 (_FPHSA_FAILURE_MESSAGE)
+  C:/Program Files/CMake/share/cmake-3.27/Modules/FindXercesC.cmake:112 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  CMakeLists.txt:71 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+MSBUILD : error MSB1009: 项目文件不存在。
+开关:install.vcxproj
+-[BuildOSM2ODR]: OSM2ODR has been successfully installed in "C:\carla\PythonAPI\carla\dependencies\"
+-[BuildPythonAPI]: [Batch params]: --py3
+Building Python API for Python 3.
+compiling:
+  - source/libcarla/libcarla.cpp
+running bdist_egg
+running egg_info
+creating source\carla.egg-info
+writing source\carla.egg-info\PKG-INFO
+writing dependency_links to source\carla.egg-info\dependency_links.txt
+writing top-level names to source\carla.egg-info\top_level.txt
+writing manifest file 'source\carla.egg-info\SOURCES.txt'
+reading manifest file 'source\carla.egg-info\SOURCES.txt'
+writing manifest file 'source\carla.egg-info\SOURCES.txt'
+installing library code to build\bdist.win-amd64\egg
+C:\Users\Admin\AppData\Roaming\Python\Python312\site-packages\setuptools\_distutils\cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running install_lib
+running build_py
+creating build
+creating build\lib.win-amd64-cpython-312
+creating build\lib.win-amd64-cpython-312\carla
+copying source\carla\command.py -> build\lib.win-amd64-cpython-312\carla
+copying source\carla\__init__.py -> build\lib.win-amd64-cpython-312\carla
+running build_ext
+building 'carla.libcarla' extension
+creating build\temp.win-amd64-cpython-312
+creating build\temp.win-amd64-cpython-312\Release
+creating build\temp.win-amd64-cpython-312\Release\source
+creating build\temp.win-amd64-cpython-312\Release\source\libcarla
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64\cl.exe" /c /nologo /O2 /W3 /GL /DNDEBUG /MD -Idependencies/include -IC:\Users\Admin\AppData\Local\Programs\Python\Python312\include -IC:\Users\Admin\AppData\Local\Programs\Python\Python312\Include "-IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include" "-IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt" "-IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include" "-IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include" "-IC:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt" /EHsc /Tpsource/libcarla/libcarla.cpp /Fobuild\temp.win-amd64-cpython-312\Release\source/libcarla/libcarla.obj /experimental:external /external:W0 /external:I dependencies/include/system /DBOOST_ALL_NO_LIB /DBOOST_PYTHON_STATIC_LIB /DBOOST_ERROR_CODE_HEADER_ONLY /D_WIN32_WINNT=0x0600 /DHAVE_SNPRINTF /DLIBCARLA_WITH_PYTHON_SUPPORT -DLIBCARLA_IMAGE_WITH_PNG_SUPPORT=true /MD
+libcarla.cpp
+dependencies/include\carla/road/element/RoadInfoMarkRecord.h(1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\carla\PythonAPI\carla\source\libcarla\OSM2ODR.cpp(7): fatal error C1083: 无法打开包括文件: “OSM2ODR.h”: No such file or directory
+error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX86\\x64\\cl.exe' failed with exit code 2
+
+-[BuildPythonAPI]: Carla lib for python has been successfully installed in "C:\carla\PythonAPI\carla\dist"!
