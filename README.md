@@ -224,7 +224,7 @@ make launch
 点击 **Play** 以启动模拟，可以通过 `WASDQE` 控制相机。
 
 使用 `PythonAPI\examples` 中的示例脚本测试模拟器，在模拟器运行时，为每个脚本打开一个新窗口，并且运行以下命令生成一些物体，并创建一个 weather cycle :
-```ruby
+```rubya
 # Terminal A 
 cd PythonAPI\examples
 pip3 install -r requirements.txt
